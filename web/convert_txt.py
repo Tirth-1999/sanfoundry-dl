@@ -11,7 +11,7 @@ from colorama import *
 def convert_txt():
 	#print(os.getcwd())
 	url_lst = []
-	with open("links.txt" , "r") as file:
+	with open("links.txt" , "r", encoding="utf-8") as file:
 		for line in file:
 			if line.startswith("#"):
 				pass
@@ -36,6 +36,6 @@ def convert_txt():
 		file_name = "txt-sites/" + f[1]
 		#print(file_name)
 
-		with open(file_name + ".txt" , "w") as file:
+		with open(file_name + ".txt" , "w" , encoding="utf-8") as file:
 		    file.write(soup.getText().strip())
 		file.close()

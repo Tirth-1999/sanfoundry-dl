@@ -42,7 +42,7 @@ def get_link(url):
 		link_ls.append(pattern[1])
 
 	os.chdir("web")
-	with open("links.txt" , "w") as file:
+	with open("links.txt" , "w", encoding="utf-8") as file:
 		for link in link_ls:
 			file.write(link)
 			file.write("\n")
